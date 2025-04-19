@@ -11,7 +11,7 @@ const Projects = () => {
 
   const [selectedLiveLang, setSelectedLiveLang] = useState('All');
 
-  const liveLanguages = ['All', 'HTML', 'Flutter', 'Python']; // Manually define
+  const liveLanguages = ['All', 'HTML', 'React',]; // Manually define
   const [previewUrl, setPreviewUrl] = useState('');
 
   const liveProjects = [
@@ -22,16 +22,16 @@ const Projects = () => {
       preview: "https://gabriel265.github.io/Portfolio_Gabriel_Kadiwa/"
     },
     {
-      name: "YouTube Downloader App",
-      url: "https://example.com",
-      language: "Flutter",
-      preview: null
+      name: "Tutor Portfolio Website",
+      url: "https://gabriel265.github.io/Gerald_Portfolio/",
+      language: "HTML",
+      preview: "https://gabriel265.github.io/Gerald_Portfolio/"
     },
     {
-      name: "Data Visualizer",
-      url: "https://example-data.com",
-      language: "Python",
-      preview: null
+      name: "Company Website",
+      url: "https://gabriel265.github.io/kadion-systems/",
+      language: "React",
+      preview: "https://gabriel265.github.io/kadion-systems/"
     }
   ];
 

@@ -1,0 +1,186 @@
+.timeline-container {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.timeline-bar {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  background: var(--accent);
+  height: 100%;
+  z-index: 0;
+}
+
+.exp-card {
+  background: var(--card-bg);
+  color: var(--text);
+  width: 45%;
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+  z-index: 2;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.exp-card.left {
+  left: 0;
+  margin-right: auto;
+}
+
+.exp-card.right {
+  right: 0;
+  margin-left: auto;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 3px solid var(--card-bg);
+  z-index: 5;
+}
+
+.exp-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.exp-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.exp-company {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.exp-duration {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.exp-summary {
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--input-bg);
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.exp-modal-btn {
+  margin-top: 1rem;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.exp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-modal {
+  background: var(--card-bg);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.exp-modal button {
+  margin-top: 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .exp-card {
+    width: 90%;
+    margin: 0 auto 2.5rem auto;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .exp-card.left,
+  .exp-card.right {
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .timeline-bar {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    transform: none;
+  }
+
+  .exp-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .exp-summary {
+    font-size: 0.92rem;
+  }
+
+  .exp-tags {
+    gap: 0.4rem;
+  }
+
+  .exp-modal {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+}
+

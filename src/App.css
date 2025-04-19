@@ -321,7 +321,7 @@ body {
   color: var(--text);
 }
 
-
+/* Skill */
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -362,7 +362,7 @@ body {
   color: var(--text);
 }
 
-
+/* Projects */
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -381,7 +381,8 @@ body {
   background: var(--card-bg);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: var(--text);
 }
 
 .github-projects {
@@ -395,7 +396,7 @@ body {
   background: var(--input-bg);
   color: var(--text);
   border-radius: 8px;
-  border: 1px solid #444;
+  border: 1px solid #ccc;
 }
 
 .live-project-list {
@@ -408,9 +409,10 @@ body {
   padding: 10px;
   cursor: pointer;
   border-radius: 8px;
-  background: #333;
+  background: var(--input-bg);
   margin-bottom: 8px;
   transition: background 0.3s ease;
+  color: var(--text);
 }
 
 .live-project-list li:hover,
@@ -424,6 +426,7 @@ body {
   height: 300px;
   border-radius: 10px;
   margin-top: 15px;
+  border: none;
 }
 
 .view-live-btn {
@@ -477,7 +480,6 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-
 
 
 footer {

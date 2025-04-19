@@ -1,35 +1,97 @@
-import React from 'react';
+import React from "react";
+import "./Certifications.css";
+import { FaGoogleDrive } from 'react-icons/fa';
 
-const certifications = [
+const certificates = [
   {
-    name: 'Ethical Hacking & Cybersecurity',
-    link: 'https://drive.google.com/file/d/1e1JiLUfZHtKcC_PyzgLnFqZ1eY0qz7Ow/view?usp=sharing',
-    embed: 'https://drive.google.com/file/d/1e1JiLUfZHtKcC_PyzgLnFqZ1eY0qz7Ow/preview'
+    title: "Bachelor Of Science in Computer Science",
+    issuer: "DMI-St. John the Baptist University",
+    issuerUrl: "https://dmisjbu.edu.mw/",
+    issueDate: "June 2020",
+    skills: "HTML, CSS, C++, Networking",
+    preview: "https://drive.google.com/thumbnail?id=11xVs2ZRcIMM9DTx9uyi5Tul0wJh-rEnp",
+    viewUrl: "https://drive.google.com/file/d/1Auu95dO4kjq2Qn7SmtFqSkiby5eO3ftt/view?usp=drive_link"
   },
   {
-    name: 'Android Application Development',
-    link: 'https://drive.google.com/file/d/1QKTGV_o3nZoUuPfbdcfUur-5lFxLpN2C/view?usp=sharing',
-    embed: 'https://drive.google.com/file/d/1QKTGV_o3nZoUuPfbdcfUur-5lFxLpN2C/preview'
+    title: "Android application Development",
+    issuer: "Pluralsight",
+    issuerUrl: "https://www.pluralsight.com",
+    issueDate: "January 2022",
+    skills: "Android Studio, Firebase, Kotlin",
+    preview: "https://drive.google.com/thumbnail?id=1XqGAZntdfclaWuFL1i_Rk9Um2qU9LmIJ",
+    viewUrl: "https://drive.google.com/file/d/1XqGAZntdfclaWuFL1i_Rk9Um2qU9LmIJ/view?usp=drive_link"
+  },
+  {
+    title: "Ethical Hacking and Cybersecurity",
+    issuer: "DMI-St. John the Baptist University",
+    issuerUrl: "https://dmisjbu.edu.mw/",
+    issueDate: "January 2020",
+    skills: "Ethical Hacking and Cybersecurity",
+    preview: "https://drive.google.com/thumbnail?id=1B5bLqDjx59JMoOprmOpm5sMl5j4fDlZQ",
+    viewUrl: "https://drive.google.com/file/d/1B5bLqDjx59JMoOprmOpm5sMl5j4fDlZQ/view?usp=drive_link"
+  },
+  {
+    title: "Ethical Hacking: Hacking Mobile Platforms",
+    issuer: "Pluralsight",
+    issuerUrl: "https://www.pluralsight.com",
+    issueDate: "January 2022",
+    skills: "Ethical Hacking and Cybersecurity",
+    preview: "https://drive.google.com/thumbnail?id=1JQoeQEXzcu5VB0XR4gO40R7YSX9j0tBL",
+    viewUrl: "https://drive.google.com/file/d/1JQoeQEXzcu5VB0XR4gO40R7YSX9j0tBL/view?usp=drive_link"
+  },
+  {
+    title: "Networking Concepts and Protocols",
+    issuer: "Pluralsight",
+    issuerUrl: "https://www.pluralsight.com",
+    issueDate: "January 2022",
+    skills: "Networking, WAN, LAN, Wireless",
+    preview: "https://drive.google.com/thumbnail?id=1DuMiF3vi6xry4j7wDb2lK1k30EJ2y0mi",
+    viewUrl: "https://drive.google.com/file/d/1DuMiF3vi6xry4j7wDb2lK1k30EJ2y0mi/view?usp=drive_link"
+  },
+  {
+    title: "Microsoft Azure Certifications",
+    issuer: "Pluralsight",
+    issuerUrl: "https://www.pluralsight.com",
+    issueDate: "January 2022",
+    skills: "Networking, WAN, LAN, Wireless",
+    preview: "https://drive.google.com/thumbnail?id=1B6ePaFFiVbXcCySYF9SUTuiNSQVivgCT",
+    viewUrl: "https://drive.google.com/file/d/1B6ePaFFiVbXcCySYF9SUTuiNSQVivgCT/view?usp=drive_link"
+  },
+  {
+    title: "Teaching English as a Foreign Language",
+    issuer: "TEFL Hero",
+    issuerUrl: "https://teflhero.com/",
+    issueDate: "January 2022",
+    skills: "English, Teaching",
+    preview: "https://drive.google.com/thumbnail?id=1QWrx58JujjtNWRNtqM10p_p_vq_k4k7K",
+    viewUrl: "https://drive.google.com/file/d/1QWrx58JujjtNWRNtqM10p_p_vq_k4k7K/view?usp=drive_link"
   }
 ];
 
-const Certifications = () => (
-  <section id="certifications">
-    <h2>Certifications</h2>
-    {certifications.map((cert, i) => (
-      <div key={i} style={{ marginBottom: '30px' }}>
-        <h3>{cert.name}</h3>
-        <iframe
-          src={cert.embed}
-          width="100%"
-          height="480"
-          allow="autoplay"
-          style={{ border: '1px solid #444', borderRadius: '10px' }}
-        ></iframe>
-        <p><a href={cert.link} target="_blank" rel="noreferrer">View in Google Drive</a></p>
+const Certifications = () => {
+  return (
+    <section id="certifications">
+      <h2 className="cert-title">🎓 Certifications</h2>
+      <div className="cert-grid">
+        {certificates.map((cert, index) => (
+          <div key={index} className="cert-card">
+            <div className="cert-img">
+              <img src={cert.preview} alt={`Preview for ${cert.title}`} />
+            </div>
+            <div className="cert-body">
+              <h3>{cert.title}</h3>
+              <p><strong>Issuer:</strong> <a href={cert.issuerUrl} target="_blank" rel="noreferrer">{cert.issuer}</a></p>
+              <p><strong>Issue Date:</strong> {cert.issueDate}</p>
+              {cert.skills && <p><strong>Skills:</strong> {cert.skills}</p>}
+              <a href={cert.viewUrl} target="_blank" rel="noreferrer">
+                  <FaGoogleDrive /> View Certificate
+                </a>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </section>
-);
+    </section>
+  );
+};
 
 export default Certifications;
