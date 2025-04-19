@@ -41,9 +41,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
         >
           <a href="#projects">📁 Projects</a>
-          <a href="#skills">🧠 Skills</a>
-          <a href="#experience">📜 Experience</a>
-          <a href="#certifications">📜 Certifications</a>
+          <a href="https://drive.google.com/file/d/1z_FxdKXmUr0hPth072UGwf27Z5qW1TXZ/view?usp=drive_link" target="_blank">📜 Resume</a>
           <a href="#contact">📬 Contact</a>
         </motion.div>
       </motion.div>
