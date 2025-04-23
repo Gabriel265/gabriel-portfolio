@@ -50,8 +50,8 @@ Welcome to my personal developer portfolio website built with **React**, **Vite*
 
 ### 1. Clone the repo
 
-git clone https://github.com/gabriel265/Portfolio_Gabriel_Kadiwa.git
-cd Portfolio_Gabriel_Kadiwa
+git clone https://github.com/Gabriel265/gabriel-portfolio.git
+cd gabriel-portfolio
 
 2. Install dependencies
 

@@ -11,15 +11,15 @@ const Projects = () => {
 
   const [selectedLiveLang, setSelectedLiveLang] = useState('All');
 
-  const liveLanguages = ['All', 'HTML', 'React',]; // Manually define
+  const liveLanguages = ['All','Javascript', 'HTML', 'React',]; // Manually define
   const [previewUrl, setPreviewUrl] = useState('');
 
   const liveProjects = [
     {
       name: "Portfolio Website",
-      url: "https://gabriel265.github.io/Portfolio_Gabriel_Kadiwa/",
-      language: "HTML",
-      preview: "https://gabriel265.github.io/Portfolio_Gabriel_Kadiwa/"
+      url: "https://gabrielkadiw.vercel.app",
+      language: "Javascript",
+      preview: "https://gabrielkadiw.vercel.app"
     },
     {
       name: "Tutor Portfolio Website",
