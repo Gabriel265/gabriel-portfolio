@@ -26,7 +26,8 @@ const Hero = () => {
               className="avatar"  
           />  
           <h1>Gabriel Kadiwa</h1>
-          <p>FullStack Developer • IT Consultant • Software Engineer</p>
+          <p>FullStack Developer • IT Consultant • Software Developer </p>
+          <p>• Graphic Designer</p>
           <div className="socials">
             <a href="https://github.com/Gabriel265" target="_blank"><FaGithub /></a>
             <a href="https://linkedin.com/in/gabriel-kadiwa-b2832b1b7" target="_blank"><FaLinkedin /></a>
@@ -43,6 +44,7 @@ const Hero = () => {
           <a href="#projects">📁 Projects</a>
           <a href="https://drive.google.com/file/d/179Yfj9d-UsXyfBkCXMo7_mFNwjo9sGs9/view?usp=drive_link" target="_blank">📜 Resume</a>
           <a href="#contact">📬 Contact</a>
+          <a href="https://gabrielthedesigner.netlify.app" target="_blank">🎨Designing</a>
         </motion.div>
       </motion.div>
     </section>

@@ -22,6 +22,12 @@ const Projects = () => {
       preview: "https://gabrielkadiw.vercel.app"
     },
     {
+      name: "Graphic Designer Portfolio",
+      url: "https://gabrielthedesigner.netlify.app",
+      language: "HTML",
+      preview: "https://gabrielthedesigner.netlify.app"
+    },
+    {
       name: "Tutor Portfolio Website",
       url: "https://gabriel265.github.io/Gerald_Portfolio/",
       language: "HTML",
