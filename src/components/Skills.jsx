@@ -34,6 +34,7 @@ const skillGroups = [
     title: "Data Science",
     icon: FaPython,
     skills: [
+      { name: "R", icon: FaDatabase },
       { name: "Python", icon: FaPython },
       { name: "Pandas", icon: FaDatabase },
       { name: "NumPy", icon: FaDatabase },

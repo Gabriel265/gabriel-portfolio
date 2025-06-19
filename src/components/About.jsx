@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import typingSound from "../assets/sounds/typing.mp3";
 
 const lines = [
-  "💡 Innovative and results-driven Computer Science professional.💻 Experienced in software development, system administration, and IT support.📈 Specializes in building scalable systems aligned with business goals.⚙️ Adept at leveraging modern technologies to drive digital transformation."
+  "💡Innovative and results-driven Computer Science professional.💻 Experienced in software development, system administration, and IT support.📈 Specializes in building scalable systems aligned with business goals.⚙️ Adept at leveraging modern technologies to drive digital transformation."
 ];
 
 const TypingEffect = ({ text, onDone, soundRef }) => {
