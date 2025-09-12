@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import './Experience.css';
 import { FaInfoCircle } from 'react-icons/fa';
 
@@ -43,6 +44,32 @@ const Experience = () => {
 
   return (
     <section id="experience">
+      <Helmet>
+        <title>Experience - Gabriel Kadiwa | Software & IT Specialist</title>
+        <meta
+          name="description"
+          content="Explore Gabriel Kadiwa's experience in software development, IT support, technical consulting, and tutoring at Codexplorer, Techno Brain, and more."
+        />
+        <meta
+          name="keywords"
+          content="software development, IT support, technical consulting, web development, graphic design, tutoring, Gabriel Kadiwa, Codexplorer, Techno Brain, React, Django, Java, Spring Boot"
+        />
+        <meta property="og:title" content="Gabriel Kadiwa's Professional Experience" />
+        <meta
+          property="og:description"
+          content="Discover Gabriel Kadiwa's expertise in software development, IT support, technical consulting, and tutoring, with experience at Codexplorer, Techno Brain, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://gabrielkadiwa.vercel.app/#experience" />
+        <meta property="og:image" content="https://gabrielkadiwa.vercel.app/images/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gabriel Kadiwa's Professional Experience" />
+        <meta
+          name="twitter:description"
+          content="View Gabriel Kadiwa's professional journey in software development, IT support, technical consulting, and tutoring with leading companies."
+        />
+        <meta name="twitter:image" content="https://gabrielkadiwa.vercel.app/images/og-image.jpg" />
+      </Helmet>
       <h2>Experience</h2>
       <div className="timeline-container">
         <motion.div

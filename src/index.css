@@ -11,6 +11,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+ 
+  --accent: #007bff; /* Adjust to your theme */
+  --card-bg: #ffffff;
+  --text: #333333;
+  --input-bg: #f5f5f5;
+
 }
 
 a {

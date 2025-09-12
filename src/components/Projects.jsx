@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { FaGithub } from 'react-icons/fa';
 
 const GITHUB_USERNAME = 'Gabriel265';
@@ -8,18 +9,40 @@ const Projects = () => {
   const [githubRepos, setGithubRepos] = useState([]);
   const [githubLanguages, setGithubLanguages] = useState(['All']);
   const [selectedGithubLang, setSelectedGithubLang] = useState('All');
-
   const [selectedLiveLang, setSelectedLiveLang] = useState('All');
-
-  const liveLanguages = ['All','Javascript', 'HTML', 'React',]; // Manually define
+  const liveLanguages = ['All', 'Javascript', 'HTML', 'React'];
   const [previewUrl, setPreviewUrl] = useState('');
 
   const liveProjects = [
     {
-      name: "Portfolio Website",
-      url: "https://gabrielkadiw.vercel.app",
+      name: "Tourism Website",
+      url: "https://holidaymalawi.com",
       language: "Javascript",
-      preview: "https://gabrielkadiw.vercel.app"
+      preview: "https:/holidaymalawi.com"
+    },
+    {
+      name: "Online Tutoring Service",
+      url: "https://helpinghandtutor.com",
+      language: "Javascript",
+      preview: "https://ghelpinghandtutor.com"
+    },
+    {
+      name: "Personal Assitants Services",
+      url: "https://helpinghandpa.com",
+      language: "Javascript",
+      preview: "https://helpinghandpa.com"
+    },
+    {
+      name: "Accountants Consultancy",
+      url: "https://helpinghandaccounts.com",
+      language: "Javascript",
+      preview: "https://helpinghandaccounts.com"
+    },
+    {
+      name: "Portfolio Website",
+      url: "https://gabrielkadiwa.vercel.app",
+      language: "Javascript",
+      preview: "https://gabrielkadiwa.vercel.app"
     },
     {
       name: "Company Website",
@@ -76,9 +99,34 @@ const Projects = () => {
 
   return (
     <section id="projects">
+      <Helmet>
+        <title>Projects - Gabriel Kadiwa | Software & Design Portfolio</title>
+        <meta
+          name="description"
+          content="Explore Gabriel Kadiwa's portfolio of software development, graphic design, and tutoring projects, including live websites and GitHub repositories built with React, JavaScript, and HTML."
+        />
+        <meta
+          name="keywords"
+          content="software development, graphic design, tutoring, web development, React, JavaScript, HTML, Gabriel Kadiwa, portfolio, GitHub projects"
+        />
+        <meta property="og:title" content="Gabriel Kadiwa's Project Portfolio" />
+        <meta
+          property="og:description"
+          content="Discover Gabriel Kadiwa's projects in software development, graphic design, and tutoring, featuring live websites and GitHub repositories."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://gabrielkadiwa.vercel.app/#projects" />
+        <meta property="og:image" content="https://gabrielkadiwa.vercel.app/images/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gabriel Kadiwa's Project Portfolio" />
+        <meta
+          name="twitter:description"
+          content="View Gabriel Kadiwa's innovative projects in software development, graphic design, and tutoring, including live websites and GitHub repositories."
+        />
+        <meta name="twitter:image" content="https://gabrielkadiwa.vercel.app/images/og-image.jpg" />
+      </Helmet>
       <h2>Projects</h2>
       <div className="projects-container">
-
         {/* 🔗 LIVE PROJECTS PANEL */}
         <motion.div
           className="live-projects"
@@ -110,25 +158,23 @@ const Projects = () => {
           </ul>
 
           {previewUrl && (
-  <div className="live-preview">
-    <iframe
-      src={previewUrl}
-      title="Live Preview"
-      frameBorder="0"
-      allow="fullscreen"
-    ></iframe>
-
-    <a
-      href={previewUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="view-live-btn"
-    >
-      🌐 View Full Site
-    </a>
-  </div>
-)}
-
+            <div className="live-preview">
+              <iframe
+                src={previewUrl}
+                title="Live Preview"
+                frameBorder="0"
+                allow="fullscreen"
+              ></iframe>
+              <a
+                href={previewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="view-live-btn"
+              >
+                🌐 View Full Site
+              </a>
+            </div>
+          )}
         </motion.div>
 
         {/* 💻 GITHUB PROJECTS PANEL */}

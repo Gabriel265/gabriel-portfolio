@@ -19,7 +19,7 @@ const Navbar = () => {
     document.body.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
-  const navItems = ['Hero', 'About', 'Skills', 'Projects', 'Experience', 'Certifications', 'Contact'];
+  const navItems = ['Hero', 'About', 'Skills', 'Projects', 'Experience', 'Certifications', 'Pricing', 'Contact'];
 
   return (
     <motion.nav

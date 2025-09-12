@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { Helmet } from "react-helmet-async"; // Import Helmet
 import typingSound from "../assets/sounds/typing.mp3";
 
 const lines = [
@@ -29,7 +30,7 @@ const TypingEffect = ({ text, onDone, soundRef }) => {
         }
         onDone();
       }
-    }, 50); // Typing speed
+    }, 50);
 
     return () => {
       clearInterval(typingInterval.current);
@@ -38,7 +39,7 @@ const TypingEffect = ({ text, onDone, soundRef }) => {
         soundRef.current.currentTime = 0;
       }
     };
-  }, []);
+  }, [text, onDone, soundRef]);
 
   return <p>{displayedText}</p>;
 };
@@ -54,12 +55,11 @@ const About = () => {
     if (inView && !isTyping && lineIndex < lines.length) {
       setIsTyping(true);
     } else if (!inView) {
-      // Reset typing on scroll out
       setTypedLines([]);
       setLineIndex(0);
       setIsTyping(false);
     }
-  }, [inView]);
+  }, [inView, isTyping, lineIndex]);
 
   const handleTypingDone = () => {
     setTypedLines(prev => [...prev, lines[lineIndex]]);
@@ -69,13 +69,38 @@ const About = () => {
 
   return (
     <section id="about" ref={ref}>
+      <Helmet>
+        <title>About Gabriel Kadiwa - Software Developer & IT Specialist</title>
+        <meta
+          name="description"
+          content="Gabriel Kadiwa is a skilled software developer, IT support specialist, graphic designer, and tutor. Explore expertise in building scalable systems, providing IT solutions, and delivering creative design services."
+        />
+        <meta
+          name="keywords"
+          content="software development, IT support, graphic designing, tutoring, web development, system administration, digital transformation"
+        />
+        <meta property="og:title" content="About Gabriel Kadiwa - Software & IT Expert" />
+        <meta
+          property="og:description"
+          content="Discover Gabriel Kadiwa's professional services in software development, IT support, graphic design, and tutoring. Contact for innovative and scalable solutions."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://gabrielkadiwa.vercel.app/about" />
+        <meta property="og:image" content="https://gabrielkadiwa.vercel.app/images/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Gabriel Kadiwa - Software & IT Expert" />
+        <meta
+          name="twitter:description"
+          content="Gabriel Kadiwa offers expert services in software development, IT support, graphic design, and tutoring. Learn more about scalable solutions and creative expertise."
+        />
+        <meta name="twitter:image" content="https://gabrielkadiwa.vercel.app/images/og-image.jpg" />
+      </Helmet>
       <h2>About Me</h2>
       <audio ref={audioRef} src={typingSound} preload="auto" />
       <div style={{ marginTop: "1.5rem", fontSize: "1.1rem", lineHeight: "1.6" }}>
         {typedLines.map((line, i) => (
           <p key={`typed-${i}`}>{line}</p>
         ))}
-
         {inView && isTyping && lineIndex < lines.length && (
           <TypingEffect
             key={`line-${lineIndex}`}
