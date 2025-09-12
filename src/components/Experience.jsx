@@ -6,11 +6,21 @@ import { FaInfoCircle } from 'react-icons/fa';
 
 const experiences = [
   {
+    title: 'Software Developer, Graphic Designer 👨‍💻',
+    company: 'Helping Hand PA and Sister Companies',
+    icon: '/icons/hh.png',
+    start: 'June 2025',
+    end: 'Present',
+    tech: ['React', 'Django', 'Vite'],
+    summary: 'Develope required software services in Django, React, flutter etc.',
+    details: 'Lead full-stack development, integrated APIs, and maintained deployment pipelines. Designing Logos and posters, promotional videos etc'
+  },
+  {
     title: 'Software Developer 👨‍💻',
     company: 'Codexplorer Ltd.',
     icon: '/icons/codexplorer.png',
     start: 'Sep 2024',
-    end: 'Present',
+    end: 'Jul 2025',
     tech: ['React', 'Django', 'Vite'],
     summary: 'Built web apps using Django and React.',
     details: 'Led full-stack development, integrated APIs, and maintained deployment pipelines.'
