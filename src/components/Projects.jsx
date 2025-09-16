@@ -10,21 +10,33 @@ const Projects = () => {
   const [githubLanguages, setGithubLanguages] = useState(['All']);
   const [selectedGithubLang, setSelectedGithubLang] = useState('All');
   const [selectedLiveLang, setSelectedLiveLang] = useState('All');
-  const liveLanguages = ['All', 'Javascript', 'HTML', 'React'];
+  const liveLanguages = ['All', 'Javascript', 'HTML', 'React', 'Python'];
   const [previewUrl, setPreviewUrl] = useState('');
 
   const liveProjects = [
     {
+      name: "Online Services Firm",
+      url: "https://hustle-media.com",
+      language: "Javascript",
+      preview: "https:/hustle-media.com"
+    },
+    {
+      name: "Vehicle Towing Company",
+      url: "https://lastmilerecovery.co.uk",
+      language: "Javascript",
+      preview: "https:/lastmilerecovery.co.uk"
+    },
+    {
       name: "Tourism Website",
       url: "https://holidaymalawi.com",
-      language: "Javascript",
+      language: "Python",
       preview: "https:/holidaymalawi.com"
     },
     {
       name: "Online Tutoring Service",
       url: "https://helpinghandtutor.com",
       language: "Javascript",
-      preview: "https://ghelpinghandtutor.com"
+      preview: "https://helpinghandtutor.com"
     },
     {
       name: "Personal Assitants Services",
