@@ -18,13 +18,13 @@ const Projects = () => {
       name: "Online Services Firm",
       url: "https://hustle-media.com",
       language: "Javascript",
-      preview: "https:/hustle-media.com"
+      preview: "https://hustle-media.com"
     },
     {
       name: "Vehicle Towing Company",
       url: "https://lastmilerecovery.co.uk",
       language: "Javascript",
-      preview: "https:/lastmilerecovery.co.uk"
+      preview: "https://lastmilerecovery.co.uk"
     },
     {
       name: "Tourism Website",
