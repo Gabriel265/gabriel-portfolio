@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://gabrielkadiwa.vercel.app/sitemap.xml
