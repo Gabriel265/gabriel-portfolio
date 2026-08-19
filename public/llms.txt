@@ -1,0 +1,40 @@
+# Gabriel Kadiwa
+
+> Portfolio of Gabriel Kadiwa — Fullstack Developer, IT Consultant, Graphic Designer, and Tutor. Retro/pixel-themed single-page portfolio built with Next.js, TypeScript, and Tailwind CSS.
+
+Gabriel is a Computer Science professional experienced in software development, system administration, and IT support, specializing in building scalable systems and leveraging modern technologies for digital transformation. He currently balances several concurrent roles spanning contract engineering, freelance project management, consulting, and running his own web development company.
+
+## Site sections
+
+All sections live on one page (https://gabrielkadiwa.vercel.app) — the links below use anchors to jump to each one.
+
+- [About](https://gabrielkadiwa.vercel.app/#about): Short bio and background.
+- [Skills](https://gabrielkadiwa.vercel.app/#skills): Web Development, Mobile Development, Data Science, IT Support & DevOps, Databases.
+- [Projects](https://gabrielkadiwa.vercel.app/#projects): Live deployed projects with previews, plus public GitHub repositories.
+- [Experience](https://gabrielkadiwa.vercel.app/#experience): Full work history, current and past.
+- [Certifications](https://gabrielkadiwa.vercel.app/#certifications): Degree and professional certifications.
+- [Pricing](https://gabrielkadiwa.vercel.app/#pricing): Live pricing embedded from Websites and Systems Co, Gabriel's web development company.
+- [Contact](https://gabrielkadiwa.vercel.app/#contact): Contact form, email, phone, and social links.
+
+## Current roles (as of 2026)
+
+- Software Engineer (Contract) — NxtGen Labs
+- Frontend Engineering Consultant — Welloverse
+- Software Developer, Graphic Designer — Helping Hand PA and Sister Companies
+- Software Engineer & Project Manager (Freelance) — Hustle Media Production (UK) / Worldstart Betting Group
+- Owner / Lead Developer — Websites and Systems Co
+
+## Core skills
+
+React, Django, Flutter, Python, JavaScript/TypeScript, Java/Spring Boot, cloud & IT support (Azure, AWS, Linux/Windows Server, networking), SQL/NoSQL databases, graphic design, and technical tutoring.
+
+## Links
+
+- Company site: https://www.websitesandsystems.com
+- GitHub: https://github.com/Gabriel265
+- LinkedIn: https://www.linkedin.com/in/gabriel-kadiwa-b2832b1b7
+- Email: gabrielkadiwa@gmail.com
+
+## Notes for automated tools
+
+This site is a personal portfolio, not a company/product site. It is a single-page application — the URLs above resolve to the same page with different anchors, not separate documents. Full CV available on request via the Contact section.

@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pixel: var(--font-press-start-2p), monospace;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-elevated: var(--elevated);
+  --color-fg: var(--fg);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent-2);
+  --color-accent-hover: var(--accent-hover);
+  --color-danger: var(--danger);
+}
+
+:root,
+:root[data-theme="night"] {
+  --bg: #0f0f17;
+  --elevated: #1a1a26;
+  --fg: #e2e2eb;
+  --accent: #ff914d;
+  --accent-2: #4ecdc4;
+  --accent-hover: #b87745;
+  --danger: #ff5757;
+  --pixel-border-color: #f5f5f5;
+}
+
+:root[data-theme="day"] {
+  --bg: #fffbeb;
+  --elevated: #f2f2f2;
+  --fg: #1f1f1f;
+  --accent: #b87745;
+  --accent-2: #1b9aaa;
+  --accent-hover: #ff914d;
+  --danger: #c82828;
+  --pixel-border-color: #1f1f17;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Pixel chrome primitives (no bitmap assets required) ---- */
+
+.pixel-border {
+  box-shadow:
+    0 -4px 0 0 var(--pixel-border-color),
+    0 4px 0 0 var(--pixel-border-color),
+    -4px 0 0 0 var(--pixel-border-color),
+    4px 0 0 0 var(--pixel-border-color);
+}
+
+.pixel-border-sm {
+  box-shadow:
+    0 -2px 0 0 var(--pixel-border-color),
+    0 2px 0 0 var(--pixel-border-color),
+    -2px 0 0 0 var(--pixel-border-color),
+    2px 0 0 0 var(--pixel-border-color);
+}
+
+.pixel-corners {
+  clip-path: polygon(
+    0 8px,
+    8px 8px,
+    8px 0,
+    calc(100% - 8px) 0,
+    calc(100% - 8px) 8px,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    8px calc(100% - 8px),
+    0 calc(100% - 8px)
+  );
+}
+
+.hud-bar {
+  background-color: var(--bg);
+  border-bottom: 4px solid var(--pixel-border-color);
+}
+
+.scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0px,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+.pixel-progress-track {
+  background-color: var(--elevated);
+}
+
+.pixel-progress-fill {
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--accent) 0px,
+    var(--accent) 8px,
+    var(--accent-hover) 8px,
+    var(--accent-hover) 10px
+  );
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}

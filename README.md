@@ -1,6 +1,6 @@
-# 👨‍💻 Gabriel Kadiwa — Developer Portfolio
+# 👾 Gabriel Kadiwa — Developer Portfolio
 
-Welcome to my personal developer portfolio website built with **React**, **Vite**, and custom interactive features. This site showcases my skills, projects, experiences, and certifications in a fun, creative, and responsive format.
+My personal developer portfolio — a retro 8-bit/16-bit game-themed site built with **Next.js**, **TypeScript**, and **Tailwind CSS**. Showcases my skills, projects, experience, and certifications as a "Player 1" world map you scroll through, complete with a HUD nav bar, day/night mode, and sound cues.
 
 ## 🚀 Live Site
 
@@ -8,41 +8,28 @@ Welcome to my personal developer portfolio website built with **React**, **Vite*
 
 ---
 
-## ✨ Features
+## 🔧 Built With
 
-### 🔧 Built With
-- ⚛️ React 19 (with JSX runtime)
-- ⚡️ Vite (for blazing fast builds)
-- 🎨 Custom CSS theming with dark/light toggle
-- 🎬 Framer Motion for smooth animations
-- 🎤 Custom typing effects with sound
-- 📦 GitHub API integration (for project showcase)
+- ▲ Next.js (App Router)
+- 🟦 TypeScript
+- 🎨 Tailwind CSS + hand-rolled "pixel chrome" (CSS-only pixel borders/notched corners, no bitmap art required)
+- 🎬 Framer Motion for animation
+- 🕹️ Retro pixel display font (Press Start 2P) for HUD/headings, Inter for readable body text
+- 📦 GitHub API integration (server-rendered, ISR-cached) for the project showcase
+- ✉️ EmailJS for the contact form
 
-### 📚 Sections
+## 📚 Sections
 
-- **Hero**: Dashboard-style landing with personal info
-- **About**: Typing animation with sound, scroll-triggered
-- **Skills**: Grouped skill cards with sound and pop animations
-- **Projects**:
-  - Dynamically fetch GitHub repositories
-  - Live project list with filter and iframe preview
-- **Certifications**: Embedded Google Drive previews with hover effects
-- **Experience**:
-  - Vertical timeline with duration-based layout
-  - Tooltips, icons, scroll animation, modals
-- **Contact**: EmailJS integrated contact form
+Single continuous scrolling page, navigated via a sticky "HUD" bar that reframes each section as a level:
 
----
-
-## 🖼️ Screenshots
-
-![Hero Image](images/hero.png)  
-
-![About Image](images/about.png)  
-
-![Project Image](images/project.png)  
-
-![Contact Image](images/contact.png) 
+- **Hero** ("START") — character-select style profile card
+- **About** ("Player 1") — typewriter-effect bio with sound, RPG dialogue-box styling
+- **Skills** ("Skill Tree") — grouped skill cards with sequential reveal + sound
+- **Projects** ("Level Select") — live project previews (iframe) + GitHub repos, both with language filters
+- **Experience** ("World Map") — vertical timeline with a "mission brief" modal per role
+- **Certifications** ("Trophy Room") — certificate cards with Google Drive previews
+- **Pricing** ("Shop") — service packages with a live currency converter
+- **Contact** ("Save Point") — EmailJS-powered contact form
 
 ---
 
@@ -50,35 +37,55 @@ Welcome to my personal developer portfolio website built with **React**, **Vite*
 
 ### 1. Clone the repo
 
+```
 git clone https://github.com/Gabriel265/gabriel-portfolio.git
 cd gabriel-portfolio
+```
 
-2. Install dependencies
+### 2. Install dependencies
 
+```
 npm install
-If you're using React 19 and hit dependency conflicts:
+```
 
+### 3. Configure environment variables
 
-npm install --legacy-peer-deps
+Copy `.env.example` to `.env.local` and fill in your own EmailJS/GitHub values:
 
-3. Run the dev server
+```
+cp .env.example .env.local
+```
 
+### 4. Run the dev server
 
+```
 npm run dev
-🧪 Folder Structure
+```
 
-src/
-├── assets/           # Images, sounds, logos
-├── components/       # React components
-├── App.css           # CSS modules and global App.css
-├── App.jsx
-└── main.jsx
-📧 Contact
+## 🧪 Folder Structure
+
+```
+app/                  # Next.js App Router: layout, page, metadata, robots/sitemap
+components/
+  layout/             # HUD nav, pause menu, title screen, footer
+  sections/           # Hero, About, Skills, Projects, Experience, Certifications, Pricing, Contact
+  providers/          # Theme (day/night) and sound (mute) context
+  ui/                 # Shared pixel-chrome primitives (PixelPanel, PixelButton, PixelBadge, Toast)
+lib/
+  data/               # Typed content (skills, experience, certifications, pricing, projects, nav)
+  github.ts           # Server-side GitHub repo fetch (ISR)
+  hooks/              # useActiveSection (HUD scrollspy)
+public/               # icons, sounds, images
+```
+
+## 📧 Contact
+
 Feel free to reach out through the contact form or:
 
 📧 Email: gabrielkadiwa@gmail.com
 
 🔗 LinkedIn - https://www.linkedin.com/in/gabriel-kadiwa-b2832b1b7/
 
-📄 License
+## 📄 License
+
 This project is open-source and available under the MIT License.
